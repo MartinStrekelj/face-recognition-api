@@ -33,7 +33,7 @@ app.put("/image", (req, res) =>{ image.processImage(req, res, db)})
 app.post("/imageURL", (req, res) =>{ image.APIHandler(req, res)})
 
 const PORT = process.env.PORT
-app.listen(PORT, () => {
+app.listen(PORT || 3000, () => {
     console.log("app is running on port " + PORT );
 });
 
